@@ -1,0 +1,275 @@
+
+// Fonts
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '/vendor/material-kit/css/material-kit.min.css';
+
+body {
+    background: #fefefe;
+}
+
+.title {
+    // letter-spacing: 1px;
+}
+
+.btn {
+	will-change: unset; // To fix modal scroll issue
+}
+
+.swal-button__loader{
+	top: 65%;
+}
+
+.modal {
+	/* &::-webkit-scrollbar { width: 0 !important }
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
+	
+	.modal-dialog {
+		margin: 3rem auto;
+	} */
+}
+
+
+.navbar{
+    border-radius: 0;
+    padding: 0;
+
+    .dropdown ,.dropdown.show {
+        .dropdown-menu {
+            background-color: #fff;
+            height: auto;
+            padding: 0;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+            overflow-y: auto;
+            .dropdown-item {
+                margin: 0.3125rem;
+
+                &.active,
+                &:active {
+            		border-radius: .125rem;
+            		font-weight: bold;
+            		background: #9c27b0 !important;
+            		color: white;
+                }
+            }
+        }
+    }
+	
+	.nav-item .nav-link {
+		transition: background 0.25s, color 0.25s;
+		border-radius: 0 !important;
+	}
+
+	.nav-item .nav-link:hover,
+	.nav-item .nav-link:hover, {
+		background: rgba(0,0,0,0.15) !important;
+	}
+
+    .nav-item.active .nav-link,
+    {
+        font-weight: bold;
+        background: #9c27b0 !important;
+        border-radius: 0;
+        color: white;
+    }
+
+    .navbar-nav {
+    	flex-wrap: wrap;
+    }
+}
+
+#main-nav {
+	margin-top: 28px;
+}
+
+#top-nav{
+	box-shadow: none;
+	background: #78909c !important;
+	color: #fff;
+	.nav-link {
+		padding-top: .25rem!important;
+		padding-bottom: .25rem!important;
+	}
+}
+
+.vertical-align{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+    &.full-height{
+        height: 100vh;
+    }
+}
+
+
+.form-group {
+	label,.bmd-label-static {
+		color: #333;
+		font-size: 14px;
+		font-weight: 500;
+	}
+
+	&.is-focused{
+		.bmd-label-static{
+			color: #9c27b0;
+		}
+	}
+
+
+}
+.form-control {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 400;
+	letter-spacing: 0.25px;
+	font-size: 15px;
+	color: #000;
+
+
+}
+
+select.form-control{
+	-webkit-appearance: menulist;
+}
+
+
+select.form-control:not([size]):not([multiple]) {
+	height: 36px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+.floating-scroll {
+	max-width: 100%;
+	overflow: auto;
+}
+
+.table.table-borderless{
+	tr,th,td{
+		border: none!important;
+	}
+}
+.custom-table {
+	border-collapse: separate;
+	border-spacing: 0px;
+	border: 0;
+	background: #fff;
+	$borderradius: 5px;
+	
+	th:first-child,td:first-child {
+		border-left: 1px solid #eee;
+		padding-left: 20px;
+	}
+	th:last-child,td:last-child {
+		border-right: 1px solid #eee;
+		padding-right: 20px;
+	}
+
+	thead {
+		th,td {
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+			background: #78909c;
+			color: white;
+			font-weight: normal;
+			white-space: nowrap;
+		}
+
+		tr:first-child {
+			th,td {
+				border: none;
+			}
+			th:first-child,td:first-child {
+				border-top-left-radius: $borderradius;
+			}
+			th:last-child,td:last-child {
+				border-top-right-radius: $borderradius;
+			}
+		}
+	}
+
+	tbody {
+		tr:last-child {
+			th:first-child,td:first-child {
+				border-bottom-left-radius: $borderradius;
+			}
+			th:last-child,td:last-child {
+				border-bottom-right-radius: $borderradius;
+			}
+		}
+	}
+	
+	th {
+		font-size: 13px;
+	}
+	td {
+		font-size: 14px;
+	}
+	td,th{
+		padding: 8px 10px;
+		border-top: none;
+		border-bottom: 1px solid #eee;
+		background: #fff;
+		vertical-align: middle;
+	}
+
+	select.form-control{
+		border: 1px solid #ddd;
+		border-radius: 2px;
+		background: initial;
+		-webkit-appearance: menulist;
+	}
+}
+
+.hoverable:hover {
+	cursor: pointer;
+}
+
+.custom-file-label{
+	background: #fff;
+	padding-top: 12px;
+	padding-right: 80px;
+	border: 1px solid #eee;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow-x: hidden;
+	&:hover{
+		cursor: pointer;
+	}
+	&:after{
+		padding-top: 12px;
+		background: #eee;
+	}
+}
+
+[role=button]:hover {
+	cursor: pointer !important;
+}
+
+.is-focused .form-check .form-check-label,
+.is-focused .form-check .form-check-label:focus {
+	color: #000;
+}
+/* 
+.form-control {
+	background-image: none !important;
+	border: 1px solid #ddd;
+} */
+
+.modal-xl {
+    max-width: 1300px;
+}

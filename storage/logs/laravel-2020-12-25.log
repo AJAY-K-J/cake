@@ -1,0 +1,4 @@
+[2020-12-25 16:11:16] local.ERROR: Out of memory (allocated 14680064) (tried to allocate 1179648 bytes) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Out of memory (allocated 14680064) (tried to allocate 1179648 bytes) at C:\\laragon\\www\\cake\\vendor\\symfony\\var-dumper\\Dumper\\HtmlDumper.php:22)
+[stacktrace]
+#0 {main}
+"} 
